@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>消消乐游戏</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <header class="game-header">
+            <h1>🍭 消消乐 🍭</h1>
+            <div class="score-board">
+                <div class="score-item">
+                    <span class="label">分数</span>
+                    <span class="value" id="score">0</span>
+                </div>
+                <div class="score-item">
+                    <span class="label">目标</span>
+                    <span class="value" id="target">1000</span>
+                </div>
+                <div class="score-item">
+                    <span class="label">步数</span>
+                    <span class="value" id="moves">30</span>
+                </div>
+            </div>
+        </header>
+        
+        <div class="game-board-container">
+            <div class="game-board" id="gameBoard"></div>
+        </div>
+        
+        <div class="game-controls">
+            <button class="btn btn-primary" id="newGameBtn">新游戏</button>
+            <button class="btn btn-secondary" id="hintBtn">提示</button>
+        </div>
+        
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+    </div>
+    
+    <!-- 游戏结束弹窗 -->
+    <div class="modal" id="gameOverModal">
+        <div class="modal-content">
+            <h2 id="gameOverTitle">游戏结束</h2>
+            <p id="gameOverMessage">恭喜完成目标！</p>
+            <div class="final-score">
+                <span>最终分数: </span>
+                <span id="finalScore">0</span>
+            </div>
+            <button class="btn btn-primary" id="playAgainBtn">再玩一次</button>
+        </div>
+    </div>
+    
+    <!-- 粒子效果容器 -->
+    <div class="particles" id="particles"></div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
